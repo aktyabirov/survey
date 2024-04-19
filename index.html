@@ -37,7 +37,7 @@
         input[type="text"],
         input[type="role"],
         input[type="region"],
-        input[type="deadline"],
+        input[type="date"],
         input[type="phoneNumber"],
         select,
         textarea {
@@ -85,6 +85,13 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        @media only screen and (max-width: 600px) {
+            body, html {
+                overflow-y: auto; 
+                height: 100%; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,9 +111,8 @@
         <label for="region">Region:</label>
         <input type="region" id="region" name="region" required>
 
-
-        <label for="deadline">Obyektni topshirish muddati:</label>
-        <input type="deadline" id="deadline" name="deadline" required>
+        <label for="date">Obyektni topshirish muddati:</label>
+        <input type="date" id="date" name="date" required>
 
         
         <label for="comment">Kamchiliklar:</label>
