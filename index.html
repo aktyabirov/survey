@@ -90,35 +90,22 @@
         <h1>So`rovnoma</h1>
         <label for="name">Ismingiz:</label>
         <input type="text" id="name" name="name" required>
-        
-        <label for="email">Pochtangiz:</label>
-        <input type="email" id="email" name="email" required>
 
-        <label for="email">Telefon raqamingiz:</label>
+        <label for="phoneNumber">Telefon raqamingiz:</label>
         <input type="phoneNumber" id="phoneNumber" name="phoneNumber" required>
 
+        <label for="role">Lavozimingiz:</label>
+        <input type="role" id="role" name="role" required>
 
-        <label>Bizni tavfsiya qilgan bo`larmidingiz? </label>
-        <div class="radio-inline">
-            <input type="radio" id="recommendYes" name="recommend" value="yes" required>
-            <label for="recommendYes">Ha </label>
-        </div>
-        <div class="radio-inline">
-            <input type="radio" id="recommendNo" name="recommend" value="no" required>
-            <label for="recommendNo">Yo`q </label>
-        </div>
+        <label for="region">Region:</label>
+        <input type="region" id="region" name="region" required>
+
+
+        <label for="deadline">Obyektni topshirish muddati:</label>
+        <input type="deadline" id="deadline" name="deadline" required>
+
         
-        <label for="rating">Bahoyingiz:</label>
-        <select id="rating" name="rating" required>
-            <option value="">Tanlang:</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        
-        <label for="comment">Qo`shimcha izohlar:</label>
+        <label for="comment">Kamchiliklar:</label>
         <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
         
         <button type="submit" id="submitButton" style="background-color: #4caf50; color: #fff; width: 100%; padding: 10px 40px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Yuborish</button>
@@ -131,8 +118,8 @@
             var formData = new FormData(this);
             var submitButton = document.getElementById("submitButton");
             var loader = document.getElementById("loader");
-            submitButton.disabled = true; // Disable submit button
-            loader.style.display = "block"; // Show loader
+            submitButton.disabled = true; 
+            loader.style.display = "block"; 
             fetch("https://script.google.com/macros/s/AKfycbwgcTcI6-GqHLjgvpQc86Vrb1_Ros1lvAVTD2COkqrIx9p_sEBr6-hALLKmJkdopz7b4A/exec", {
                 method: "POST",
                 body: formData
